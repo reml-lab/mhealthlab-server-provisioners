@@ -96,8 +96,7 @@ sudo chmod -R 777 $MHL_ROOT
 
 # install python and components
 sudo apt-get install python3.8 -y
-
-sudo apt install python3-pip -y
+sudo apt-get install python3-pip -y
 
 # install cerebral cortex
 # Leaving out lon install of CC for now
@@ -107,8 +106,7 @@ sudo apt install python3-pip -y
 cp -r $MHL_ROOT/demos/generator /vagrant/
 
 # install apache webserver
-sudo apt update
-sudo apt install apache2 -y
+sudo apt-get install apache2 -y
 
 # configure webserver
 sudo rm /var/www/html/index.html
@@ -116,7 +114,7 @@ sudo cp -r $MHL_ROOT/demos/generator/live.html /var/www/html/
 sudo cp -r $MHL_ROOT/config_$MHL_CONFIG/index.html /var/www/html/
 sudo cp -r $MHL_ROOT/config_$MHL_CONFIG/health.jpg /var/www/html/
 sudo cp -r $MHL_ROOT/config_$MHL_CONFIG/map.png /var/www/html/
-apachectl start
+sudo apachectl start
 
 # install airflow
 pip3 install pip==20.2.4
@@ -179,10 +177,6 @@ echo "Downloading SDCRS.jar"
 curl "https://people.cs.umass.edu/~marlin/mhlab/SDCRS.jar" -o $MHL_ROOT/apps/SDCRS_jar/SDCRS.jar
 echo "Downloading VisualizationServer.jar"
 curl "https://people.cs.umass.edu/~marlin/mhlab/VisualizationServer.jar" -o $MHL_ROOT/apps/VisualizationServer_jar/VisualizationServer.jar
-
-
-#Start apache
-sudo apachectl start
 
 # run cc integration test
 #python3 /home/vagrant/mhealthlab-deployable/demos/cc_integration/cc_integration_test.py
