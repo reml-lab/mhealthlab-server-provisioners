@@ -169,10 +169,15 @@ sudo chown -R vagrant:vagrant /vagrant/jupyter
 sudo chmod -R 777 /vagrant/jupyter
 
 #Download large project binaries
+echo "Downloading DCRS.jar"
 curl "https://people.cs.umass.edu/~marlin/mhlab/DCRS.jar" -o $MHL_ROOT/apps/DCRS_jar/DCRS.jar
+echo "Downloading ObelixTap.jar"
 curl "https://people.cs.umass.edu/~marlin/mhlab/ObelixTap.jar" -o $MHL_ROOT/apps/ElasticTap_jar/ObelixTap.jar
+echo "Downloading SCHTap.jar"
 curl "https://people.cs.umass.edu/~marlin/mhlab/SCHTap.jar" -o $MHL_ROOT/apps/schtap/SCHTap.jar
+echo "Downloading SDCRS.jar"
 curl "https://people.cs.umass.edu/~marlin/mhlab/SDCRS.jar" -o $MHL_ROOT/apps/SDCRS_jar/SDCRS.jar
+echo "Downloading VisualizationServer.jar"
 curl "https://people.cs.umass.edu/~marlin/mhlab/VisualizationServer.jar" -o $MHL_ROOT/apps/VisualizationServer_jar/VisualizationServer.jar
 
 

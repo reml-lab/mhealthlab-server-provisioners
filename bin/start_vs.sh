@@ -1,4 +1,4 @@
-source ~/.bashrc
+source ~/.profile
 
 echo "starting visualization server"
 screen -d -m -S vs
