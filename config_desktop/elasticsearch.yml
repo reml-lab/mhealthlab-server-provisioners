@@ -42,8 +42,10 @@ path.logs: ${MHL_ROOT}/libs/elasticsearch/logs
 # ----------------------------------- Memory -----------------------------------
 #
 # Lock the memory on startup:
-#
-#bootstrap.memory_lock: true
+# Try locking memory to increase perfromance
+bootstrap.memory_lock: true
+
+
 #
 # Make sure that the heap size is set to about half the memory available
 # on the system and that the owner of the process is allowed to use this
