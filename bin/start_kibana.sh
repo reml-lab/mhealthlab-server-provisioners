@@ -34,4 +34,4 @@ done
 echo "Kibana available"
 
 # import kibana dashboard
-curl -XPOST 'http://localhost:5601/api/kibana/dashboards/import' -H 'Content-Type: application/json' -H "kbn-xsrf: true" -d @"${MHL_ROOT}/config/dash.json"
+curl -XPOST 'http://localhost:5601/api/kibana/dashboards/import' -H 'Content-Type: application/json' -H "kbn-xsrf: true" -d @"${MHL_ROOT}/config_$MHL_CONFIG/dash.json"
